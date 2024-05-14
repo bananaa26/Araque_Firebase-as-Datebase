@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Authentication is Fun</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: rgb(250, 239, 221);
+        color: rgb(68, 49, 12);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="authForm">
+      <h2>Sign Up or Sign In</h2>
+      <input type="email" placeholder="email" id="userEmail" />
+      <input type="password" placeholder="password" id="userPassword" />
+      <br /><br />
+      <button id="signUpButton">Sign Up</button>
+      <button id="signInButton">Sign In</button>
+    </div>
+
+    <div id="secretContent">
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        [class*="col-"] {
+          float: left;
+          padding: 15px;
+        }
+        
+        html {
+          font-family: "Lucida Sans", sans-serif;
+        }
+        
+        .header {
+          background-color: #f9caca;
+          color: #572626;
+          padding: 15px;
+        }
+        
+        .menu ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .menu li {
+          padding: 8px;
+          margin-bottom: 7px;
+          background-color: #f8ccca;
+          color: #572626;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        
+        .menu li:hover {
+          background-color: #f8ccca;
+        }
+        
+        .aside {
+          background-color:#f8ccca;
+          padding: 15px;
+          color: #572626;
+          text-align: center;
+          font-size: 14px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        
+        .footer {
+          background-color: #f8ccca;
+          color: #572626;
+          text-align: center;
+          font-size: 12px;
+          padding: 15px;
+        }
+        
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+        
+        @media only screen and (min-width: 600px) {
+          /* For tablets: */
+          .col-s-1 {width: 8.33%;}
+          .col-s-2 {width: 16.66%;}
+          .col-s-3 {width: 25%;}
+          .col-s-4 {width: 33.33%;}
+          .col-s-5 {width: 41.66%;}
+          .col-s-6 {width: 50%;}
+          .col-s-7 {width: 58.33%;}
+          .col-s-8 {width: 66.66%;}
+          .col-s-9 {width: 75%;}
+          .col-s-10 {width: 83.33%;}
+          .col-s-11 {width: 91.66%;}
+          .col-s-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="header">
+          <h1>CLOZETTA</h1>
+        </div>
+        
+        <div class="row">
+          <div class="col-3 col-s-3 menu">
+            <ul>
+              <li>Sale</li>
+              <li>New Arrival</li>
+              <li>Tops</li>
+              <li>Pants</li>
+            </ul>
+          </div>
+        
+          <div class="col-6 col-s-9">
+            <h1>About Clozetta</h1>
+            <p>Clozetta is an online fast fashion retailer based in the Philippines. It offers a wide range of trendy and affordable clothing and accessories, catering to fashion-conscious individuals who want to stay up-to-date with the latest styles without breaking the bank.</p>
+          </div>
+        
+          <div class="col-3 col-s-12">
+            <div class="aside">
+              <h2>What?</h2>
+              <p>Clozetta is an online fast fashion retailer based in the Philippines.</p>
+              <h2>Where?</h2>
+              <p>Clozetta's headquarters are situated in Punta Sta. Ana, Manila, Philippines. This location serves as the hub for its operations, including product management, customer service, and logistics.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!--  Portfolio -->
+        <h2 id= "Portfolio" class ="text-center pd-5 mt-5 mb-5" >Portfolio</h2>
+  <!-- portfolio toprow -->
+  <div class = "container">
+      <div class = "column">
+  
+          <iframe width="640" height="415" src="https://www.youtube.com/embed/gJpXlRkW6Fw?si=WYUZH6fc_ZxrJnrJ" title="YouTube video player" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+          <iframe width="640" height="415" src="https://www.youtube.com/embed/RRv5udKGG68?si=H8ADhETfLi27BR5q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- END PORTFOLIO -->
+  
+        <!-- ABOUT -->
+        <h2 id= "About" class ="text-center pd-5 mt-5 mb-5" >How to order from Clozetta?</h2>
+        <p class="text-center">
+          
+          Ordering from Clozetta is simple and convenient:
+          Browse to our website, add items to your cart, and complete the checkout process with your shipping and payment information. Confirm your order to finish and enjoy your new fashion finds.</p>
+  
+        <!-- END About -->
+  
+        <!-- CONTACT -->
+    <h2 id= "Contact" class ="text-center pd-5 mt-5 mb-5" >Contact</h2>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <iframe width="520" height="400" frameborder="5" scrolling="no" marginheight="3" marginwidth="3" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=sta%20ana%20manila%20manila+(manila)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href='https://maps-generator.com/'>Maps Generator</a>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> 
+      <footer style="bottom: 0; width: 100%; background-color: #f3d5de; color: #80233f; text-align: center; height: 50px; line-height: 50px;">
+      &copy; Clozetta Clothing
+      <a href="https://www.facebook.com/vanaharaque"><i class="fa-brands fa-square-facebook" style="color: #80233f;"></i></a>
+      <a href="https://www.instagram.com/vanaharaque/"><i class="fa-brands fa-instagram" style="color: #80233f;"></i></a>
+      </footer>
+      
+      
+      <button id="signOutButton">Sign Out</button>
+    </div>
+
+    <script type="module">
+      //Update the below URL with the appropriate version if necessary.
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+        //Update the below URL with the appropriate version if necessary.
+      } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+      // INSERT YOUR FIREBASE CONFIG OBJECT HERE
+      const firebaseConfig = {
+        apiKey: "AIzaSyBJbEm6rMTObvILOS3lIhWjLqrF4J2aBIk",
+        authDomain: "auth-fa1b7.firebaseapp.com",
+        projectId: "auth-fa1b7",
+        storageBucket: "auth-fa1b7.appspot.com",
+        messagingSenderId: "270624695799",
+        appId: "1:270624695799:web:ebc7e61edf90ef855e7af2",
+      };
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const userEmail = document.querySelector("#userEmail");
+      const userPassword = document.querySelector("#userPassword");
+      const authForm = document.querySelector("#authForm");
+      const secretContent = document.querySelector("#secretContent");
+      const signUpButton = document.querySelector("#signUpButton");
+      const signInButton = document.querySelector("#signInButton");
+      const signOutButton = document.querySelector("#signOutButton");
+
+      secretContent.style.display = "none";
+
+      const userSignUp = async () => {
+        const signUpEmail = userEmail.value;
+        const signUpPassword = userPassword.value;
+        createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            Swal.fire("Your Account is succesfully created!");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode + errorMessage);
+          });
+      };
+
+      const userSignIn = async () => {
+        const signInEmail = userEmail.value;
+        const signInPassword = userPassword.value;
+        signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            Swal.fire("You have signed in successfully!");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode + errorMessage);
+          });
+      };
+
+      const checkAuthState = async () => {
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            authForm.style.display = "none";
+            secretContent.style.display = "block";
+          } else {
+            authForm.style.display = "block";
+            secretContent.style.display = "none";
+          }
+        });
+      };
+
+      const userSignOut = async () => {
+        await signOut(auth);
+        Swal.fire("User Logout");
+      };
+
+      checkAuthState();
+
+      signUpButton.addEventListener("click", userSignUp);
+      signInButton.addEventListener("click", userSignIn);
+      signOutButton.addEventListener("click", userSignOut);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/090fe43456.js" crossorigin="anonymous"></script>
+  </body>
+</html>
